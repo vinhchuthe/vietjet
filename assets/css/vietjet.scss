@@ -1,0 +1,2793 @@
+@import "./fonts/font";
+
+%relative {
+    position: relative;
+    width: auto;
+    height: 100%;
+}
+%img {
+    width: 100%;
+    display: block;
+}
+
+%text {
+    font-family: SanomatSansVN-Light;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+* {
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html,
+body {
+    overflow: hidden;
+}
+#ascrail2000-hr {
+    z-index: 11 !important;
+}
+
+.vct-wrapper {
+    @extend %relative;
+    overflow: hidden;
+
+    .section-wrapper {
+        display: flex;
+        height: 100vh;
+        width: auto;
+        position: relative;
+
+        .section-container {
+            @extend %relative;
+            display: block;
+            flex: 0 0 auto;
+            height: 100vh;
+
+            .section-inner {
+                position: relative;
+                height: 100%;
+            }
+
+            &.section1 {
+                flex: 0 0 100vw;
+                .section-inner {
+                    @extend %relative;
+                    background-image: url("../image/slide1-bg.png");
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+
+                    .section-content {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 90%;
+                        height: 90vh;
+                        box-sizing: border-box;
+                        z-index: 1;
+                        background-color: rgba(3, 5, 4, 0.24);
+
+                        .section-content-inner {
+                            display: block;
+                            padding: 30px;
+                            margin: 30px;
+                            border: 1px solid #fff;
+                            position: absolute;
+                            height: auto;
+                            bottom: 0;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+
+                            .s1-content-title {
+                                p {
+                                    color: #fff;
+                                    font-family: SanomatSansVN-Light;
+
+                                    &.label-year {
+                                        font-size: 16px;
+                                        line-height: 1;
+                                        margin-bottom: 25px;
+                                    }
+                                    &.sapo {
+                                        font-size: 20px;
+                                        line-height: 1.4;
+                                        max-width: 25vw;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                                .s1-title {
+                                    color: #fff;
+                                    font-family: SanomatSansVN-Light;
+                                    font-size: 50px;
+                                    line-height: 1.2;
+                                    max-width: 50vw;
+                                    margin-bottom: 20px;
+
+                                    span {
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                            .s1-content-credit {
+                                position: absolute;
+                                bottom: 20px;
+                                left: 30px;
+                                width: calc(100% - 60px);
+
+                                .credit {
+                                    float: left;
+                                    ul {
+                                        display: flex;
+                                        li {
+                                            font-family: SanomatSansVN-Light;
+                                            border-right: 1px solid #fff;
+                                            color: #fff;
+                                            padding: 0 20px;
+                                            font-size: 16px;
+
+                                            &:first-child {
+                                                padding: 0 20px 0 0;
+                                            }
+                                            &:last-child {
+                                                border-right: none;
+                                            }
+                                        }
+                                    }
+                                }
+                                .deco-bot {
+                                    float: right;
+                                    max-width: 150px;
+
+                                    img {
+                                        @extend %img;
+                                    }
+                                }
+                            }
+                            .s1-content-deco {
+                                background-image: url("../image/slide1-deco-mid.png");
+                                background-repeat: no-repeat;
+                                height: 90%;
+                                position: absolute;
+                                width: 30%;
+                                top: 50%;
+                                left: 50%;
+                                -webkit-transform: translate(-50%, -50%);
+                                transform: translate(-50%, -50%);
+                                background-size: 100% 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            &.section2 {
+                flex: 0 0 100vw;
+                .section-inner {
+                    @extend %relative;
+                    background-image: url("../image/slide2-bg.png");
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+
+                    .section-content {
+                        .s2-content-title {
+                            position: absolute;
+                            top: 10%;
+                            left: 30%;
+                            z-index: 1;
+
+                            h3 {
+                                font-family: SanomatSansVN-Light;
+                                font-size: 60px;
+                                text-align: right;
+                                line-height: 1.2;
+                                color: #0c0e0f;
+                            }
+                        }
+                        .s2-content-text {
+                            position: absolute;
+                            top: 25%;
+                            right: 5%;
+                            z-index: 1;
+                            max-width: 40vw;
+
+                            img {
+                                @extend %img;
+                            }
+
+                            &:hover {
+                                animation-name: bubble;
+                                animation-duration: 1s;
+                                animation-fill-mode: forwards;
+                                animation-iteration-count: 1;
+                                animation-direction: normal;
+                            }
+                        }
+                    }
+                }
+            }
+            &.section3 {
+                flex: 0 0 100vw;
+                .section-inner {
+                    .s3-gr1 {
+                        display: flex;
+
+                        &-left {
+                            flex: 0 0 25%;
+
+                            img {
+                                @extend %img;
+                                height: 100vh;
+                            }
+                        }
+                        &-right {
+                            flex: 0 0 75%;
+
+                            .s3-gr2 {
+                                display: flex;
+                                flex-direction: column;
+                                // height: 100vh;
+
+                                &-top {
+                                    flex: 0 0 46%;
+                                    height: 46vh;
+                                    overflow: hidden;
+                                    img {
+                                        @extend %img;
+                                        height: 100%;
+                                    }
+                                }
+                                &-bot {
+                                    flex: 0 0 54%;
+                                    height: 54vh;
+                                    overflow: hidden;
+
+                                    .s3-gr3 {
+                                        @extend %relative;
+                                        display: inline-flex;
+                                        width: 100%;
+
+                                        &-left {
+                                            flex: 0 0 65%;
+                                            position: relative;
+
+                                            .gr3-left-text {
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 0;
+                                                transform: translateY(-50%);
+                                                padding: 30px;
+
+                                                .gr3-title {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: center;
+
+                                                    p {
+                                                        color: #030504;
+                                                        font-family: SanomatSansVN-Light;
+                                                        font-size: 60px;
+                                                        line-height: 1.1;
+                                                        padding-right: 100px;
+                                                        position: relative;
+                                                        margin-bottom: 0;
+
+                                                        &:first-child {
+                                                            padding-left: 30px;
+                                                        }
+                                                        &:last-child {
+                                                            padding-left: 150px;
+                                                            padding-right: 0;
+                                                        }
+                                                        .index {
+                                                            color: #dd001b;
+                                                            font-size: 20px;
+                                                            position: absolute;
+                                                            top: -5px;
+                                                            left: 0;
+                                                        }
+                                                    }
+                                                }
+                                                .line {
+                                                    padding: 25px 0;
+
+                                                    img {
+                                                        @extend %img;
+                                                    }
+                                                }
+                                                p {
+                                                    color: #030504;
+                                                    font-family: SanomatSansVN-Light;
+                                                    font-size: 18px;
+                                                    line-height: 1.3;
+                                                    text-align: justify;
+                                                    margin-bottom: 0;
+                                                }
+                                            }
+                                        }
+                                        &-right {
+                                            flex: 0 0 35%;
+
+                                            img {
+                                                @extend %img;
+                                                height: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section4 {
+                flex: 0 0 auto;
+
+                .section-inner {
+                    .s4-gr {
+                        @extend %relative;
+                        width: auto;
+                        height: 100vh;
+                        display: flex;
+
+                        &-map {
+                            // max-width: 55vw;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            height: 100%;
+                            // flex: 0 0 800px;
+
+                            .map-img {
+                                position: relative;
+                                height: 90%;
+                                width: auto;
+                                margin-left: 20%;
+
+                                img {
+                                    @extend %img;
+                                    height: 100%;
+                                }
+                            }
+                            .map-des {
+                                position: absolute;
+                                max-width: 480px;
+                                top: 10%;
+                                left: 5%;
+
+                                h3 {
+                                    display: inline-block;
+                                    float: right;
+                                    font-family: SanomatSansVN-Medium;
+                                    padding-bottom: 20px;
+                                    font-size: 24px;
+                                    line-height: 1.1;
+                                    margin-bottom: 0;
+                                }
+                                p {
+                                    clear: both;
+                                    text-align: right;
+                                    padding-top: 20px;
+                                    border-top: 1px dashed #000000;
+                                    line-height: 1.2;
+                                    margin-bottom: 0;
+
+                                    .s4-underline {
+                                        font-family: SanomatSansVN-Medium;
+                                    }
+                                }
+                            }
+                        }
+                        &-list {
+                            flex: 0 0 430px;
+                            background-image: url("../image/gr-cta.png");
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-position: top right;
+                            position: relative;
+                            z-index: 2;
+
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+
+                                li {
+                                    flex: 0 0 20%;
+                                    margin-bottom: 20px;
+                                    max-width: 320px;
+
+                                    .cta-item {
+                                        .cta-img {
+                                            margin-bottom: 20px;
+                                            img {
+                                                width: 100%;
+                                                height: 100%;
+                                                display: block;
+                                            }
+                                        }
+                                        .cta-text {
+                                            p {
+                                                text-align: justify;
+                                                font-family: SanomatSansVN-Light;
+                                                font-size: 14px;
+                                                line-height: 1.3;
+                                            }
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &-bimg {
+                            display: flex;
+                            width: auto;
+                            position: relative;
+                            z-index: 1;
+                            margin-left: -50px;
+
+                            .bimg-item {
+                                position: relative;
+                                height: 100vh;
+                                width: auto;
+                                margin-right: 40px;
+
+                                img {
+                                    display: block;
+                                    height: 100%;
+                                    width: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section5 {
+                flex: 0 0 auto;
+                // max-width: 95%;
+
+                .section-inner {
+                    .s5-gr {
+                        position: relative;
+                        display: flex;
+                        height: 100%;
+                        flex-direction: column;
+                        // margin-left: 7%;
+
+                        &-overlay {
+                            &-abs {
+                                position: absolute;
+
+                                img {
+                                    @extend %img;
+                                }
+
+                                &.deco1 {
+                                    height: 500px;
+                                    width: 500px;
+                                    top: 0;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                                &.tag1 {
+                                    top: 25%;
+                                    left: 10%;
+                                    height: 6vw;
+                                    width: auto;
+
+                                    img {
+                                        @extend %img;
+                                        width: auto;
+                                        height: 100%;
+                                    }
+                                }
+                                &.tag2 {
+                                    top: 25%;
+                                    right: 10%;
+                                    height: 6vw;
+                                    width: auto;
+                                    z-index: 2;
+
+                                    img {
+                                        @extend %img;
+                                        width: auto;
+                                        height: 100%;
+                                    }
+                                }
+                                &.deco2 {
+                                    height: 300px;
+                                    width: 500px;
+                                    top: 0;
+                                    right: 0;
+                                }
+                            }
+                        }
+                        &-top {
+                            flex: 0 0 45%;
+                            position: relative;
+                            height: 45vh;
+                            display: flex;
+
+                            &-title {
+                                padding-top: 30px;
+
+                                h3 {
+                                    display: inline-block;
+                                    float: right;
+                                    font-family: SanomatSansVN-Medium;
+                                    padding-bottom: 20px;
+                                    font-size: 24px;
+                                    line-height: 1.1;
+                                    margin-bottom: 0;
+                                }
+
+                                p {
+                                    clear: both;
+                                    text-align: right;
+                                    padding-top: 20px;
+                                    border-top: 1px dashed #000000;
+                                    line-height: 1.2;
+                                    margin-bottom: 0;
+                                    max-width: 580px;
+                                    padding-right: 100px;
+                                }
+                            }
+                        }
+                        &-bot {
+                            flex: 0 0 50%;
+                            position: relative;
+                            height: 50vh;
+                            display: flex;
+                            width: min-content;
+
+                            &-item {
+                                height: 100%;
+                                position: relative;
+                                padding: 0 15px;
+
+                                img {
+                                    display: block;
+                                    height: 100%;
+                                    width: auto;
+                                    margin: 0 auto;
+                                }
+
+                                &.s5-item1 {
+                                    flex: 0 0 35%;
+                                }
+                                &.s5-item2 {
+                                    flex: 0 0 12%;
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    p {
+                                        margin-top: 20px;
+                                        font-size: 14px;
+                                        font-family: SanomatSansVN-Light;
+                                        text-align: justify;
+                                        line-height: 1.3;
+                                    }
+                                    img {
+                                        height: 80%;
+                                    }
+                                }
+                                &.s5-item3 {
+                                    flex: 0 0 30%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section6 {
+                flex: 0 0 auto;
+
+                .section-inner {
+                    .s6-gr {
+                        position: relative;
+                        display: flex;
+                        height: 100%;
+
+                        &-left {
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            height: 100%;
+
+                            &-top {
+                                flex: 0 0 47%;
+                                position: relative;
+                                height: 47vh;
+                                width: auto;
+
+                                img {
+                                    display: block;
+                                    height: 100%;
+                                    width: auto;
+                                }
+                            }
+                            &-bot {
+                                flex: 0 0 50%;
+                                position: relative;
+                                height: 50vh;
+                                width: auto;
+
+                                img {
+                                    display: block;
+                                    height: 100%;
+                                    width: auto;
+                                }
+                            }
+                        }
+                        &-right {
+                            position: relative;
+                            height: 100%;
+                            &-img {
+                                height: 80vh;
+                                width: auto;
+
+                                img {
+                                    @extend %img;
+                                    width: auto;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section7 {
+                flex: 0 0 auto;
+
+                .section-inner {
+                    .s7-gr {
+                        position: relative;
+                        display: flex;
+                        height: 100%;
+
+                        &-left {
+                            position: relative;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+
+                            &-video {
+                                padding: 30px;
+                                width: 900px;
+                                background-image: url("../image/video-bg.png");
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                background-position: center;
+
+                                video {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                }
+                            }
+                        }
+                        &-right {
+                            width: 640px;
+                            position: relative;
+                            height: 100vh;
+                            display: flex;
+                            align-items: center;
+
+                            .s7-gr-text-content {
+                                position: relative;
+                                padding-right: 30px;
+
+                                img {
+                                    display: block;
+                                    width: 90%;
+                                }
+                                .s7-text {
+                                    padding-left: 30px;
+                                    margin-top: -60px;
+
+                                    &-title {
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        width: 85%;
+
+                                        p {
+                                            color: #030504;
+                                            font-family: SanomatSansVN-Light;
+                                            font-size: 60px;
+                                            line-height: 1.1;
+                                            padding-right: 100px;
+                                            position: relative;
+                                            margin-bottom: 0;
+
+                                            &:first-child {
+                                                padding-left: 30px;
+                                            }
+                                            &:last-child {
+                                                padding-left: 110px;
+                                                padding-right: 0;
+                                                margin-bottom: 30px;
+                                            }
+                                            .index {
+                                                color: #dd001b;
+                                                font-size: 20px;
+                                                position: absolute;
+                                                top: -5px;
+                                                left: 0;
+                                            }
+                                        }
+                                    }
+                                    .des {
+                                        color: #030504;
+                                        font-family: SanomatSansVN-Light;
+                                        font-size: 20px;
+                                        line-height: 1.3;
+                                        text-align: justify;
+                                        margin-bottom: 0;
+                                        width: 80%;
+                                        margin: 0 auto;
+                                    }
+                                    .line {
+                                        padding: 20px 0;
+                                        width: 80%;
+                                        margin: 0 auto;
+
+                                        img {
+                                            @extend %img;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section8 {
+                flex: 0 0 auto;
+
+                .section-inner {
+                    .s8-gr {
+                        @extend %relative;
+                        &-bg {
+                            @extend %relative;
+
+                            img {
+                                display: block;
+                                width: auto;
+                                height: 100%;
+                            }
+                        }
+                        &-overlay {
+                            position: absolute;
+                            max-width: 480px;
+                            top: 10%;
+                            right: 5%;
+                            z-index: 2;
+
+                            img {
+                                @extend %img;
+                            }
+                        }
+                    }
+                }
+            }
+            &.section9 {
+                flex: 0 0 auto;
+
+                .section-inner {
+                    .s9-gr {
+                        @extend %relative;
+                        display: flex;
+
+                        &-bg {
+                            @extend %relative;
+                            margin-left: -25vw;
+
+                            img {
+                                display: block;
+                                width: auto;
+                                height: 100%;
+                            }
+                        }
+                        &-overlay1 {
+                            position: absolute;
+                            top: 10%;
+                            left: 5%;
+                            max-width: 320px;
+
+                            img {
+                                @extend %img;
+                            }
+                        }
+                        &-overlay2 {
+                            width: 320px;
+                            position: relative;
+                            height: 100%;
+
+                            img {
+                                @extend %img;
+                                position: absolute;
+                                bottom: 10%;
+                            }
+                        }
+                    }
+                }
+            }
+            &.section10 {
+                .section-inner {
+                    position: relative;
+                    height: 100%;
+                    padding-left: 5%;
+
+                    .s10-flex-group {
+                        height: 50vh;
+                        display: flex;
+                        width: 100%;
+
+                        .flex-group-item {
+                            height: 50vh;
+                            margin-right: 40px;
+
+                            .s10-gr-img {
+                                position: relative;
+                                height: 40vh;
+                                width: auto;
+
+                                img {
+                                    width: auto;
+                                    height: 100%;
+                                    max-width: 100%;
+                                    max-height: 40vh;
+                                    position: relative;
+                                    object-fit: contain;
+                                    margin: 0 auto;
+                                }
+                            }
+                            .s10-gr-text {
+                                margin-top: -50px;
+                                position: relative;
+                                padding-left: 30px;
+                                display: flex;
+                                align-items: flex-end;
+
+                                img {
+                                    max-width: 300px;
+                                }
+                                p {
+                                    @extend %text;
+                                    font-size: 14px;
+                                    color: #030504;
+                                    margin-bottom: 0 !important;
+                                    line-height: 1;
+                                    padding-left: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section11 {
+                .section-inner {
+                    position: relative;
+                    height: 100%;
+
+                    .s11-gr {
+                        height: 100vh;
+                        display: flex;
+                        padding-left: 30px;
+                        padding-right: 300px;
+
+                        &1 {
+                            width: 400px;
+                            height: 95vh;
+                            top: 50%;
+                            margin-right: 15px;
+                            transform: translateY(-50%);
+                            position: relative;
+                            background-image: url("../image/s12-gr1-bg.png");
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            box-sizing: border-box;
+                            padding: 0 30px;
+                            display: inline-flex;
+                            align-items: flex-end;
+
+                            .s11-gr1-inner {
+                                position: relative;
+                                margin-bottom: 20px;
+
+                                img {
+                                    display: block;
+                                    max-width: 10vw;
+                                    margin-bottom: 30px;
+                                    margin-left: auto;
+                                }
+                                .s11-title {
+                                    color: #fff;
+                                    font-size: 40px;
+                                    line-height: 1.2;
+
+                                    &.bold {
+                                        font-family: SanomatSansVN-Medium;
+                                    }
+                                    &.light {
+                                        font-family: SanomatSansVN-Light;
+                                    }
+                                    &:last-of-type {
+                                        margin-bottom: 30px;
+                                    }
+                                }
+                                p {
+                                    @extend %text;
+                                    margin-bottom: 20px !important;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        &2 {
+                            height: 95vh;
+                            position: relative;
+                            transform: translateY(-50%);
+                            top: 50%;
+                            z-index: 1;
+                            width: auto;
+
+                            img {
+                                width: auto;
+                                height: 100%;
+                                display: block;
+                            }
+                        }
+                        &3 {
+                            position: absolute;
+                            top: 10px;
+                            right: 5%;
+                            width: 580px;
+                            height: auto;
+                            z-index: 0;
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            &.section12 {
+                flex: 0 0 auto;
+
+                .section-inner {
+                    position: relative;
+                    height: 100%;
+
+                    .s12-gr {
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        &-title {
+                            display: flex;
+                            margin-bottom: 30px;
+                            align-items: center;
+                            // margin-left: -16vw;
+
+                            &l {
+                                position: relative;
+                                padding-right: 30px;
+                                margin-right: 30px;
+
+                                p {
+                                    font-size: 50px;
+                                    font-family: SanomatSansVN-Light;
+                                    line-height: 1.2;
+                                    color: #030504;
+                                    margin-bottom: 0 !important;
+
+                                    .index {
+                                        color: #dd001b;
+                                        font-size: 20px;
+                                        position: absolute;
+                                        top: -5px;
+                                        left: -30px;
+                                    }
+                                }
+                                &::after {
+                                    content: "";
+                                    width: 1px;
+                                    height: 70%;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translateY(-50%);
+                                    background-color: #dd001b;
+                                }
+                            }
+                            &r {
+                                p {
+                                    font-size: 60px;
+                                    font-family: SanomatSansVN-Light;
+                                    line-height: 1.3;
+                                    color: #030504;
+                                    margin-bottom: 0 !important;
+                                }
+                            }
+                        }
+                        &-text {
+                            // max-width: 50vw;
+                            padding-left: 40px;
+                            margin-left: 200px;
+                            width: 800px;
+
+                            p {
+                                @extend %text;
+                                margin-bottom: 20px;
+                                color: #4d4e4e;
+                            }
+
+                            .s12-gr-content {
+                                img {
+                                    width: 100%;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section13 {
+                flex: 0 0 auto;
+                z-index: 2;
+                .section-inner {
+                    position: relative;
+                    height: 100%;
+
+                    .s13-gr {
+                        display: flex;
+                        height: 100%;
+                        padding-left: 20vw;
+
+                        &-bg1 {
+                            position: relative;
+                            height: 100%;
+                            width: auto;
+                            display: flex;
+                            align-items: center;
+                            margin-right: 50px;
+
+                            &-img {
+                                position: relative;
+                                height: 90vh;
+                                width: auto;
+
+                                img {
+                                    display: block;
+                                    width: auto;
+                                    height: 100%;
+                                }
+                            }
+                            &-overlay {
+                                position: absolute;
+                                bottom: 10vh;
+                                left: -20vh;
+                                width: 55vh;
+                                height: auto;
+
+                                img {
+                                    @extend %img;
+                                }
+                            }
+                        }
+                        &-bg2 {
+                            position: relative;
+                            height: 100%;
+                            width: auto;
+                            display: flex;
+                            align-items: center;
+
+                            &-img {
+                                position: relative;
+                                height: 90vh;
+                                width: auto;
+
+                                img {
+                                    display: block;
+                                    width: auto;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section14 {
+                flex: 0 0 auto;
+                z-index: 1;
+                .section-inner {
+                    @extend %relative;
+                    .s14-gr {
+                        @extend %relative;
+                        margin-left: -25%;
+                        padding-right: 150px;
+
+                        &-bg {
+                            @extend %relative;
+                            img {
+                                display: block;
+                                height: 100%;
+                                width: auto;
+                            }
+                        }
+                        &-content {
+                            position: absolute;
+                            top: 15%;
+                            right: 0;
+                            width: 560px;
+
+                            .s14-title {
+                                position: relative;
+                                margin-bottom: 40px;
+
+                                p {
+                                    font-size: 50px;
+                                    font-family: SanomatSansVN-Light;
+                                    line-height: 1.2;
+                                    color: #030504;
+                                    margin-bottom: 0 !important;
+                                    position: relative;
+
+                                    .index {
+                                        color: #dd001b;
+                                        font-size: 20px;
+                                        position: absolute;
+                                        top: -5px;
+                                        left: -30px;
+                                    }
+
+                                    &:first-child {
+                                        margin-left: 50px;
+                                    }
+                                }
+                            }
+                            .s14-col-text {
+                                position: relative;
+                                p {
+                                    @extend %text;
+                                    column-count: 2;
+                                    column-gap: 30px;
+                                    margin-bottom: 20px;
+                                    color: #4d4e4e;
+                                }
+                            }
+                        }
+                        &-stamp {
+                            position: absolute;
+                            width: 320px;
+                            height: auto;
+                            bottom: 5%;
+                            right: 4%;
+
+                            img {
+                                @extend %img;
+                            }
+                        }
+                    }
+                }
+            }
+            &.section15 {
+                .section-inner {
+                    .s15-gr {
+                        display: flex;
+                        height: 100%;
+
+                        &-left {
+                            flex: 0 0 auto;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+
+                            &-map {
+                                height: 90vh;
+                                width: auto;
+                                margin: 0 auto;
+
+                                img {
+                                    @extend %img;
+                                    width: auto;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                        &-right {
+                            flex: 0 0 auto;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+
+                            table {
+                                position: relative;
+                                width: 1300px;
+                                table-layout: fixed;
+
+                                tr {
+                                    td {
+                                        .s15-tag-item {
+                                            max-width: 80%;
+                                            padding-bottom: 30px;
+
+                                            img {
+                                                width: 100%;
+                                                display: block;
+                                                margin-bottom: 20px;
+                                            }
+                                            p {
+                                                @extend %text;
+                                                margin-bottom: 20px;
+                                                color: #030504;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &-overlay {
+                            position: absolute;
+                            bottom: 3%;
+                            left: 20%;
+                            max-width: 700px;
+                            height: auto;
+
+                            img {
+                                @extend %img;
+                            }
+                        }
+                    }
+                }
+            }
+            &.section16 {
+                .section-inner {
+                    .s16-gr {
+                        display: flex;
+                        height: 100%;
+
+                        &-left {
+                            flex: 0 0 auto;
+                            display: flex;
+                            position: relative;
+                            z-index: 2;
+
+                            img {
+                                width: auto;
+                                height: 100vh;
+                                display: block;
+                            }
+                        }
+                        &-right {
+                            flex: 0 0 auto;
+                            position: relative;
+                            z-index: 1;
+
+                            &-bg {
+                                width: auto;
+                                height: 100vh;
+                                margin-left: -8%;
+                                padding-right: 360px;
+
+                                img {
+                                    width: auto;
+                                    height: 100%;
+                                    display: block;
+                                }
+                            }
+                            &-overlay {
+                                position: absolute;
+                                top: 50%;
+                                right: 5%;
+                                transform: translateY(-50%);
+                                max-width: 560px;
+
+                                .s16-overlay-title {
+                                    margin-bottom: 45px;
+
+                                    p {
+                                        font-size: 50px;
+                                        font-family: SanomatSansVN-Light;
+                                        line-height: 1.2;
+                                        color: #030504;
+                                        margin-bottom: 0 !important;
+                                        position: relative;
+                                        display: inline-block;
+
+                                        .index {
+                                            color: #dd001b;
+                                            font-size: 20px;
+                                            position: absolute;
+                                            top: -5px;
+                                            left: -30px;
+                                        }
+                                        &:first-child {
+                                            margin-left: 40px;
+                                        }
+                                    }
+                                }
+                                .s16-overlay-content {
+                                    max-width: 65%;
+                                    margin-left: auto;
+
+                                    &-text {
+                                        p {
+                                            @extend %text;
+                                            margin-bottom: 50px;
+                                            color: #4d4e4e;
+                                        }
+                                    }
+                                    &-img {
+                                        margin-bottom: 60px;
+
+                                        img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+                                    }
+                                    .line {
+                                        position: relative;
+                                        p {
+                                            font-size: 20px;
+                                            line-height: 1.2;
+                                            color: #1a1818;
+                                            font-family: SanomatSansVN-Medium;
+                                            padding-bottom: 20px;
+                                        }
+                                        img {
+                                            position: absolute;
+                                            bottom: 0;
+                                            right: 0;
+                                            width: 35vw;
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section17 {
+                .section-inner {
+                    .s17-gr {
+                        display: flex;
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        &-item {
+                            flex: 0 0 auto;
+                            width: 28vw;
+                            max-width: 450px;
+                            margin-right: 40px;
+
+                            &-img {
+                                width: 100%;
+                                height: auto;
+                                margin-bottom: 10px;
+                                opacity: 0;
+                                transform: scale(0);
+                                transition: all 0.75s;
+
+                                img {
+                                    @extend %img;
+                                    height: auto;
+                                }
+                            }
+                            &-content {
+                                padding-left: 5%;
+                                opacity: 0;
+                                transform: translateY(-50px);
+                                transition: all 0.75s;
+
+                                img {
+                                    width: 20vw;
+                                    max-width: 320px;
+                                    height: auto;
+                                    display: block;
+                                    margin-bottom: 20px;
+                                }
+                                p {
+                                    @extend %text;
+                                    font-size: 15px;
+                                    margin-bottom: 20px;
+                                    color: #030504;
+                                }
+                            }
+
+                            &.visible {
+                                .s17-gr-item-img {
+                                    opacity: 1;
+                                    transform: scale(1);
+                                    transition: all 0.75s;
+                                }
+                                .s17-gr-item-content {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                    transition: all 0.75s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section18 {
+                .section-inner {
+                    .s18-gr {
+                        display: flex;
+                        height: 100%;
+                        margin-left: -5vw;
+
+                        &-left {
+                            display: flex;
+                            height: 100%;
+                            &-item1 {
+                                display: flex;
+                                height: 100%;
+                                max-width: 35vw;
+                                align-items: flex-end;
+
+                                img {
+                                    @extend %img;
+                                    height: auto;
+                                }
+                            }
+                            &-item2 {
+                                max-width: 800px;
+                                position: relative;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                margin-right: 10vw;
+                                margin-left: -10vw;
+
+                                .s18-item2-title {
+                                    max-width: 70%;
+                                    margin: 0 auto 40px;
+
+                                    p {
+                                        font-size: 50px;
+                                        font-family: SanomatSansVN-Light;
+                                        line-height: 1.2;
+                                        color: #030504;
+                                        margin-bottom: 0 !important;
+                                        position: relative;
+
+                                        .index {
+                                            color: #dd001b;
+                                            font-size: 20px;
+                                            position: absolute;
+                                            top: -30px;
+                                            left: 30px;
+                                        }
+
+                                        &:last-child {
+                                            text-align: right;
+                                            margin-left: 200px;
+                                        }
+                                    }
+                                }
+                                .s18-item2-text {
+                                    margin-bottom: 40px;
+
+                                    p {
+                                        @extend %text;
+                                        margin-bottom: 50px;
+                                        color: #1a1818;
+                                    }
+                                }
+                                .s18-item2-img {
+                                    max-width: 70%;
+                                    margin-left: auto;
+
+                                    img {
+                                        @extend %img;
+                                    }
+                                }
+                            }
+                            &-item3 {
+                                position: relative;
+                                height: 100%;
+
+                                img {
+                                    display: block;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                        &-right {
+                            display: flex;
+                            height: 100%;
+
+                            &-item1 {
+                                position: relative;
+                                height: 100%;
+
+                                img {
+                                    display: block;
+                                    height: 100%;
+                                }
+                            }
+                            &-item2 {
+                                position: relative;
+                                height: 100%;
+
+                                .s18-item2-content {
+                                    position: relative;
+                                    height: 100%;
+                                    background-image: url("../image/s23-bg-img.png");
+                                    background-repeat: no-repeat;
+                                    background-size: 100% 100%;
+                                    background-position: center;
+
+                                    .s18-content-text {
+                                        position: relative;
+                                        top: 10%;
+
+                                        .s18-text-title {
+                                            margin-left: 30px;
+
+                                            p {
+                                                font-size: 20px;
+                                                line-height: 1.2;
+                                                color: #1a1818;
+                                                font-family: SanomatSansVN-Medium;
+                                                padding-bottom: 20px;
+                                            }
+                                        }
+                                        .line {
+                                            max-width: 85%;
+
+                                            img {
+                                                @extend %img;
+                                            }
+                                        }
+                                        .s18-text-list {
+                                            margin-left: 30px;
+                                            margin-top: 30px;
+
+                                            ul {
+                                                max-width: 60%;
+
+                                                li {
+                                                    margin-bottom: 20px;
+                                                    padding-left: 20px;
+                                                    position: relative;
+
+                                                    .text-bold {
+                                                        font-size: 20px;
+                                                        line-height: 1.2;
+                                                        color: #1a1818;
+                                                        font-family: SanomatSansVN-Medium;
+                                                        padding-bottom: 10px;
+                                                    }
+                                                    .text-light {
+                                                        @extend %text;
+                                                        color: #1a1818;
+                                                    }
+
+                                                    &::after {
+                                                        position: absolute;
+                                                        top: 6px;
+                                                        left: 0;
+                                                        content: "";
+                                                        width: 7px;
+                                                        height: 7px;
+                                                        background-color: #dd001b;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section19 {
+                .section-inner {
+                    .s19-gr {
+                        &-bg {
+                            width: 50vw;
+                            height: 100vh;
+                            position: relative;
+                            background-image: url("../image/s24-bg-img.png");
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            float: left;
+
+                            &-title {
+                                position: absolute;
+                                top: 5%;
+                                right: 10%;
+                                p {
+                                    font-size: 50px;
+                                    font-family: SanomatSansVN-Light;
+                                    line-height: 1.2;
+                                    color: #030504;
+                                    margin-bottom: 0 !important;
+                                    position: relative;
+
+                                    .index {
+                                        color: #dd001b;
+                                        font-size: 20px;
+                                        position: absolute;
+                                        top: -5px;
+                                        left: -30px;
+                                    }
+                                    &:first-child {
+                                        margin-left: 40px;
+                                    }
+                                    &:last-child {
+                                        margin-left: 75px;
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                            &-line {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                height: 85%;
+                                width: 1px;
+                                background-color: #000000;
+
+                                &::after {
+                                    content: "";
+                                    width: 20px;
+                                    height: 30px;
+                                    position: absolute;
+                                    top: -7%;
+                                    right: -10px;
+                                    background-image: url("../image/s24-line-deco.png");
+                                    background-repeat: no-repeat;
+                                    background-size: 100% 100%;
+                                }
+                            }
+                        }
+                        &-content {
+                            max-width: 30vw;
+                            height: 100vh;
+                            padding: 0 20px;
+                            float: left;
+
+                            &-inner {
+                                position: relative;
+                                top: 50%;
+                                transform: translateY(-50%);
+
+                                .s19-content-text {
+                                    @extend %text;
+                                    color: #1a1818;
+                                    margin-bottom: 30px;
+                                }
+                                .s19-content-img {
+                                    margin-bottom: 30px;
+                                    max-width: 80%;
+
+                                    img {
+                                        @extend %img;
+                                    }
+                                }
+                                .line {
+                                    p {
+                                        font-size: 20px;
+                                        line-height: 1.2;
+                                        color: #1a1818;
+                                        font-family: SanomatSansVN-Medium;
+                                        padding-bottom: 20px;
+                                    }
+                                    img {
+                                        @extend %img;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section20 {
+                .section-inner {
+                    .s20-gr {
+                        position: relative;
+                        // height: 100%;
+                        display: flex;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        margin-left: 100px;
+
+                        &-item {
+                            flex: 0 0 auto;
+                            max-width: 40vw;
+                            margin-right: 80px;
+
+                            &-img {
+                                margin-bottom: 30px;
+
+                                img {
+                                    @extend %img;
+                                    height: auto;
+                                }
+                            }
+                            &-content {
+                                ul {
+                                    li {
+                                        margin-bottom: 20px;
+
+                                        .text-bold {
+                                            font-size: 18px;
+                                            line-height: 1.2;
+                                            color: #1a1818;
+                                            font-family: SanomatSansVN-Medium;
+                                        }
+                                        .text-light {
+                                            @extend %text;
+                                            font-size: 14px;
+                                            color: #1a1818;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.s20-item1 {
+                                position: relative;
+                                .s20-gr-item-content {
+                                    ul {
+                                        column-count: 2;
+                                        column-gap: 30px;
+                                    }
+                                }
+                            }
+                            &.s20-item2 {
+                                position: relative;
+                                .s20-gr-item-content {
+                                    ul {
+                                        max-width: 50%;
+                                    }
+                                }
+                            }
+                            &.s20-item3 {
+                                // display: flex;
+                                position: relative;
+
+                                .s20-gr-item-img {
+                                    position: relative;
+
+                                    img {
+                                        @extend %img;
+
+                                        &:last-child {
+                                            max-width: 30%;
+                                            height: auto;
+                                            position: relative;
+                                            margin-top: -22%;
+                                            margin-left: 10%;
+                                        }
+                                    }
+                                }
+                            }
+                            &.s20-item4 {
+                                position: relative;
+                                max-width: unset;
+                                margin-left: -70px;
+
+                                .s20-gr-content {
+                                    &-img {
+                                        max-width: 65%;
+                                        height: auto;
+                                        margin-left: -10%;
+                                        position: relative;
+
+                                        img {
+                                            @extend %img;
+                                        }
+                                    }
+                                    &-text {
+                                        max-width: 80%;
+                                        display: block;
+                                        margin-left: auto;
+
+                                        .s20-underline {
+                                            @extend %text;
+                                            font-size: 18px;
+                                            color: #4d4e4e;
+                                            padding: 0 15px 30px;
+                                            position: relative;
+
+                                            &:after {
+                                                content: "";
+                                                position: absolute;
+                                                bottom: 25px;
+                                                left: 0;
+                                                height: 0.5px;
+                                                width: 100%;
+                                                background-color: #4d4e4e;
+                                            }
+
+                                            a {
+                                                font-family: SanomatSansVN-Medium;
+                                                color: #2a59a6;
+                                                text-decoration: none;
+                                            }
+                                        }
+                                        .hand-write {
+                                            font-family: iCielBCHuskey-Roman;
+                                            font-size: 25px;
+                                            line-height: 1.3;
+                                            text-align: center;
+                                            margin: 25px 0;
+                                        }
+                                        .des {
+                                            font-family: SanomatSansVN-Light;
+                                            font-size: 18px;
+                                            font-style: italic;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section21 {
+                .section-inner {
+                    .s21-gr {
+                        position: relative;
+                        display: flex;
+                        height: 100%;
+                        padding-right: 100px;
+
+                        &-img {
+                            max-width: 40vw;
+
+                            img {
+                                @extend %img;
+                                position: relative;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                        &-content {
+                            &-img {
+                                max-width: 60vw;
+                                position: relative;
+                                top: 20%;
+                                transform: translateY(-50%);
+
+                                img {
+                                    @extend %img;
+                                }
+                            }
+                            .back-to-top {
+                                position: absolute;
+                                bottom: 10%;
+                                right: 20%;
+                                display: inline-block;
+                                padding: 10px 20px;
+                                border-radius: 20px;
+                                border: 1px solid #d60d1f;
+                                cursor: pointer;
+
+                                p {
+                                    font-family: SanomatSansVN-Light;
+                                    font-style: 18px;
+                                    color: #1a1818;
+                                    margin-bottom: 0;
+                                    line-height: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 1300px) {
+    .vct-wrapper {
+        .section-wrapper {
+            .section-container {
+                &.section2 {
+                    .section-inner {
+                        .section-content {
+                            .s2-content-text {
+                                max-width: 450px;
+                            }
+                        }
+                    }
+                }
+                &.section16 {
+                    .section-inner {
+                        .s16-gr {
+                            .s16-gr-right {
+                                .s16-gr-right-overlay {
+                                    top: 45%;
+                                    right: 7%;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section17 {
+                    .section-inner {
+                        .s17-gr {
+                            .s17-gr-item {
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+                &.section18 {
+                    .section-inner {
+                        .s18-gr {
+                            &-left {
+                                &-item1 {
+                                    max-width: 500px;
+                                }
+                                &-item2 {
+                                    margin-right: 10%;
+                                    margin-left: -10%;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section19 {
+                    .section-inner {
+                        .s19-gr {
+                            .s19-gr-content {
+                                max-width: 450px;
+                            }
+                        }
+                    }
+                }
+                &.section20 {
+                    .section-inner {
+                        .s20-gr {
+                            .s20-gr-item {
+                                max-width: 650px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1400px) and (min-width: 1301px) {
+    .vct-wrapper {
+        .section-wrapper {
+            .section-container {
+                &.section1 {
+                    .section-inner {
+                        .section-content {
+                            .section-content-inner {
+                                .s1-content-title {
+                                    .s1-title {
+                                        font-size: 45px;
+                                    }
+                                    .sapo {
+                                        font-size: 18px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section2 {
+                    .section-inner {
+                        .section-content {
+                            .s2-content-title {
+                                top: 5%;
+                            }
+                            .s2-content-text {
+                                max-width: 450px;
+                                right: 10%;
+                            }
+                        }
+                    }
+                }
+                &.section3 {
+                    .section-inner {
+                        .s3-gr1 {
+                            &-right {
+                                .s3-gr2 {
+                                    &-bot {
+                                        .s3-gr3 {
+                                            &-left {
+                                                .gr3-left-text {
+                                                    .gr3-title {
+                                                        p {
+                                                            font-size: 50px;
+                                                        }
+                                                    }
+                                                    .line {
+                                                        padding: 20px 0;
+                                                    }
+                                                    p {
+                                                        font-size: 16px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section4 {
+                    .section-inner {
+                        .s4-gr {
+                            &-list {
+                                ul {
+                                    li {
+                                        .cta-item {
+                                            .cta-text {
+                                                p {
+                                                    font-size: 12px;
+                                                }
+                                            }
+                                            .cta-img {
+                                                width: 85%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section5 {
+                    .section-inner {
+                        .s5-gr {
+                            .s5-gr-overlay {
+                                .s5-gr-overlay-abs {
+                                    &.tag1 {
+                                        top: 30%;
+                                        left: 10%;
+                                        height: auto;
+                                        width: 250px;
+
+                                        img {
+                                            width: 100%;
+                                            height: auto;
+                                        }
+                                    }
+                                    &.tag2 {
+                                        top: 30%;
+                                        right: 10%;
+                                        height: auto;
+                                        width: 250px;
+
+                                        img {
+                                            width: 100%;
+                                            height: auto;
+                                        }
+                                    }
+                                }
+                            }
+                            .s5-gr-bot {
+                                .s5-gr-bot-item {
+                                    &.s5-item2 {
+                                        img {
+                                            height: 70%;
+                                        }
+                                        p {
+                                            font-size: 13px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section7 {
+                    .section-inner {
+                        .s7-gr {
+                            .s7-gr-right {
+                                .s7-gr-text-content {
+                                    img {
+                                        width: 80%;
+                                    }
+                                    .s7-text {
+                                        .s7-text-title {
+                                            p {
+                                                font-size: 45px;
+                                            }
+                                        }
+                                        .des {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section9 {
+                    .section-inner {
+                        .s9-gr {
+                            &-overlay1 {
+                                max-width: 300px;
+                            }
+                            &-overlay2 {
+                                width: 250px;
+                            }
+                        }
+                    }
+                }
+                &.section10 {
+                    .section-inner {
+                        .s10-flex-group {
+                            .flex-group-item {
+                                .s10-gr-text {
+                                    p {
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section11 {
+                    .section-inner {
+                        .s11-gr {
+                            .s11-gr3 {
+                                width: 480px;
+                            }
+                        }
+                    }
+                }
+                &.section14 {
+                    .section-inner {
+                        .s14-gr {
+                            .s14-gr-stamp {
+                                width: 300px;
+                            }
+                        }
+                    }
+                }
+                &.section20 {
+                    .section-inner {
+                        .s20-gr {
+                            .s20-gr-item {
+                                max-width: 500px;
+
+                                .s20-gr-item-img {
+                                    margin-bottom: 15px;
+                                }
+                                .s20-gr-item-content {
+                                    ul {
+                                        li {
+                                            margin-bottom: 15px;
+
+                                            .text-bold {
+                                                font-size: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.s20-item4 {
+                                    max-width: unset;
+
+                                    .s20-gr-content {
+                                        .s20-gr-content-text {
+                                            .s20-underline {
+                                                font-size: 16px;
+
+                                                &:last-child {
+                                                    padding: 0 15px 0;
+                                                }
+                                            }
+                                            .hand-write {
+                                                margin: 15px 0;
+                                                font-size: 20px;
+                                            }
+                                            .des {
+                                                font-size: 12px;
+                                            }
+                                        }
+                                        .s20-gr-content-img {
+                                            max-width: 60%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1920px) and (min-width: 1601px) {
+    .vct-wrapper {
+        .section-wrapper {
+            .section-container {
+                &.section1 {
+                    .section-inner {
+                        .section-content {
+                            .section-content-inner {
+                                .s1-content-title {
+                                    .s1-title {
+                                        font-size: 60px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section2 {
+                    .section-inner {
+                        .section-content {
+                            .s2-content-text {
+                                right: 10%;
+                                max-width: 600px;
+                            }
+                        }
+                    }
+                }
+                &.section16 {
+                    .section-inner {
+                        .s16-gr {
+                            .s16-gr-right {
+                                .s16-gr-right-overlay {
+                                    top: 45%;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section17 {
+                    .section-inner {
+                        .s17-gr {
+                            .s17-gr-item {
+                                width: auto;
+                                max-width: 500px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 2000px) {
+    .vct-wrapper {
+        .section-wrapper {
+            .section-container {
+                &.section1 {
+                    .section-inner {
+                        .section-content {
+                            .section-content-inner {
+                                .s1-content-title {
+                                    p {
+                                        &.label-year {
+                                            font-size: 25px;
+                                            margin-bottom: 40px;
+                                        }
+                                        &.sapo {
+                                            font-size: 35px;
+                                        }
+                                    }
+
+                                    .s1-title {
+                                        font-size: 100px;
+                                        line-height: 1.25;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section2 {
+                    .section-inner {
+                        .section-content {
+                            .s2-content-title {
+                                h3 {
+                                    font-size: 100px;
+                                }
+                            }
+                            .s2-content-text {
+                                right: 13%;
+                            }
+                        }
+                    }
+                }
+                &.section3 {
+                    .section-inner {
+                        .s3-gr1 {
+                            .s3-gr1-right {
+                                .s3-gr2 {
+                                    .s3-gr2-bot {
+                                        .s3-gr3 {
+                                            .s3-gr3-left {
+                                                .gr3-left-text {
+                                                    .gr3-title {
+                                                        p {
+                                                            font-size: 100px;
+
+                                                            &:last-child {
+                                                                padding-left: 350px;
+                                                            }
+
+                                                            .index {
+                                                                font-size: 45px;
+                                                                top: -15px;
+                                                                left: -25px;
+                                                            }
+                                                        }
+                                                    }
+                                                    p {
+                                                        font-size: 35px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section4 {
+                    .section-inner {
+                        .s4-gr {
+                            &-map {
+                                .map-img {
+                                    margin-left: 400px;
+                                }
+                                .map-des {
+                                    max-width: 750px;
+
+                                    h3 {
+                                        font-size: 44px;
+                                    }
+
+                                    p {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                            &-list {
+                                flex: 0 0 630px;
+
+                                ul {
+                                    li {
+                                        max-width: 520px;
+
+                                        .cta-item {
+                                            .cta-text {
+                                                p {
+                                                    font-size: 25px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section5 {
+                    .section-inner {
+                        .s5-gr {
+                            &-overlay {
+                                .s5-gr-overlay-abs {
+                                    &.deco1 {
+                                        height: 40vw;
+                                        width: 40vw;
+                                    }
+                                    &.deco2 {
+                                        height: 25vw;
+                                        width: 35vw;
+                                    }
+                                }
+                            }
+                            &-top {
+                                &-title {
+                                    h3 {
+                                        font-size: 40px;
+                                    }
+                                    p {
+                                        font-size: 30px;
+                                        max-width: 980px;
+                                    }
+                                }
+                            }
+                            &-bot {
+                                &-item {
+                                    &.s5-item2 {
+                                        p {
+                                            font-size: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section7 {
+                    .section-inner {
+                        .s7-gr {
+                            &-left {
+                                &-video {
+                                    width: 1500px;
+                                }
+                            }
+                            &-right {
+                                width: 940px;
+
+                                .s7-gr-text-content {
+                                    .s7-text {
+                                        &-title {
+                                            p {
+                                                font-size: 80px;
+
+                                                .index {
+                                                    font-size: 30px;
+                                                    top: -15px;
+                                                }
+                                            }
+                                        }
+                                        .des {
+                                            font-size: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section8 {
+                    .section-inner {
+                        .s8-gr {
+                            &-overlay {
+                                max-width: 680px;
+                            }
+                        }
+                    }
+                }
+                &.section9 {
+                    .section-inner {
+                        .s9-gr {
+                            &-overlay1 {
+                                max-width: 420px;
+                            }
+                            &-overlay2 {
+                                width: 520px;
+                            }
+                        }
+                    }
+                }
+                &.section10 {
+                    .section-inner {
+                        .s10-flex-group {
+                            .flex-group-item {
+                                .s10-gr-text {
+                                    margin-top: -90px;
+
+                                    img {
+                                        max-width: unset;
+                                        width: 500px;
+                                    }
+                                    p {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section11 {
+                    .section-inner {
+                        .s11-gr {
+                            &1 {
+                                width: 650px;
+
+                                &-inner {
+                                    img {
+                                        width: 100%;
+                                    }
+                                    .s11-title {
+                                        font-size: 60px !important;
+                                    }
+                                    p {
+                                        font-size: 25px !important;
+                                    }
+                                }
+                            }
+                            &3 {
+                                width: 780px;
+                            }
+                        }
+                    }
+                }
+                &.section12 {
+                    .section-inner {
+                        .s12-gr {
+                            &-title {
+                                &l {
+                                    p {
+                                        font-size: 70px;
+
+                                        .index {
+                                            font-size: 40px;
+                                            top: -25px;
+                                            left: -50px;
+                                        }
+                                    }
+                                }
+                                &r {
+                                    p {
+                                        font-size: 80px;
+                                    }
+                                }
+                            }
+                            &-text {
+                                width: 1200px;
+
+                                p {
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section14 {
+                    .s14-gr {
+                        &-content {
+                            width: 760px !important;
+
+                            .s14-title {
+                                p {
+                                    font-size: 80px !important;
+
+                                    .index {
+                                        left: -40px !important;
+                                        font-size: 30px !important;
+                                    }
+                                }
+                            }
+                            .s14-col-text {
+                                p {
+                                    font-size: 25px !important;
+                                }
+                            }
+                        }
+                        &-stamp {
+                            width: 420px !important;
+                        }
+                    }
+                }
+                &.section15 {
+                    .section-inner {
+                        .s15-gr {
+                            &-overlay {
+                                max-width: 1200px;
+                            }
+                            &-right {
+                                table {
+                                    width: 2000px;
+
+                                    tr {
+                                        td {
+                                            .s15-tag-item {
+                                                p {
+                                                    font-size: 25px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section16 {
+                    .section-inner {
+                        .s16-gr {
+                            &-right {
+                                &-bg {
+                                    padding-right: 560px;
+                                }
+                                &-overlay {
+                                    max-width: 760px;
+
+                                    .s16-overlay-title {
+                                        p {
+                                            font-size: 70px;
+                                        }
+                                    }
+                                    .s16-overlay-content {
+                                        &-text {
+                                            p {
+                                                font-size: 25px;
+                                            }
+                                        }
+                                        .line {
+                                            p {
+                                                font-size: 30px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section17 {
+                    .section-inner {
+                        .s17-gr {
+                            &-item {
+                                max-width: 750px;
+
+                                &-content {
+                                    img {
+                                        max-width: 520px;
+                                    }
+                                    p {
+                                        font-size: 25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section18 {
+                    .section-inner {
+                        .s18-gr {
+                            &-left {
+                                &-item2 {
+                                    max-width: 1200px;
+
+                                    .s18-item2-title {
+                                        p {
+                                            font-size: 70px;
+
+                                            .index {
+                                                font-size: 30px;
+                                                top: -40px;
+                                                left: 20px;
+                                            }
+                                        }
+                                    }
+                                    .s18-item2-text {
+                                        p {
+                                            font-size: 25px;
+                                        }
+                                    }
+                                    .s18-item2-img {
+                                        width: 70%;
+                                        max-width: unset;
+                                    }
+                                }
+                            }
+                            &-right {
+                                &-item2 {
+                                    .s18-item2-content {
+                                        .s18-content-text {
+                                            .s18-text-title {
+                                                p {
+                                                    font-size: 45px;
+                                                }
+                                            }
+                                            .s18-text-list {
+                                                ul {
+                                                    max-width: unset;
+
+                                                    li {
+                                                        .text-bold {
+                                                            font-size: 40px;
+                                                        }
+                                                        .text-light {
+                                                            font-size: 30px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section19 {
+                    .section-inner {
+                        .s19-gr {
+                            &-bg {
+                                &-title {
+                                    p {
+                                        font-size: 70px;
+
+                                        .index {
+                                            top: -10px;
+                                            left: -40px;
+                                            font-size: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                            &-content {
+                                max-width: 35vw;
+
+                                &-inner {
+                                    .s19-content-text {
+                                        font-size: 30px;
+                                    }
+                                    .line {
+                                        p {
+                                            font-size: 40px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section20 {
+                    .section-inner {
+                        .s20-gr {
+                            &-item {
+                                max-width: unset;
+                                width: 45vw;
+
+                                &-content {
+                                    ul {
+                                        li {
+                                            .text-bold {
+                                                font-size: 30px;
+                                                margin-bottom: 10px;
+                                            }
+                                            .text-light {
+                                                font-size: 25px;
+                                                line-height: 1.3;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.s20-item4 {
+                                    .s20-gr-content {
+                                        &-text {
+                                            .s20-underline {
+                                                font-size: 30px;
+                                            }
+                                            .hand-write {
+                                                font-size: 40px;
+                                            }
+                                            .des {
+                                                font-size: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
